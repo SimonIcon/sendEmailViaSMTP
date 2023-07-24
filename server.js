@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
     const mailOptions = {
         from: req.body.email,
         to: process.env.EMAIL,
-        subject: `message from ${req.body.email}`,
+        subject: `message from ${req.body.name}`,
         text: req.body.message,
     }
     transporter.sendMail(mailOptions).then(() => {
